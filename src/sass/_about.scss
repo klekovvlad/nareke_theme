@@ -1,0 +1,36 @@
+.about {
+    padding: 100px 0px;
+    &-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 50px;
+    }
+    &-text {
+        padding: 100px 0px;
+    }
+    &-imgs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+    &-img {
+        height: calc(100% - 50px);
+        object-fit: cover;
+        object-position: center;
+        &:last-child {
+            margin-top: 50px;
+        }
+    }
+
+    .desc {
+        margin-bottom: 30px;
+        p {
+            font-size: 18px;
+            color: $second;
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

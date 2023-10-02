@@ -1,0 +1,39 @@
+.video {
+    padding: 100px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .titles {
+        .title,
+        .subtitle {
+            text-align: center;
+        }
+    }
+    &-player {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: $popupbg;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        iframe {
+            width: 1200px;
+            height: 600px;
+        }
+    }
+
+    &-play {
+        border: none;
+        cursor: pointer;
+        display: block;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: $brandblue;
+        margin: 0px auto;
+    }
+}

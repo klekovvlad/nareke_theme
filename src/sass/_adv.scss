@@ -1,0 +1,36 @@
+.adv {
+    padding: 100px 0px;
+    .titles {
+        max-width: max(700px, 70%);
+    }
+    &-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+
+    &-noicon {
+        width: 40px;
+        height: 40px;
+        background: $lightgray;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+
+    &-item {
+        padding: 30px 30px 40px;
+        border: 1px solid $brandgold;
+        
+        .title {
+            color: $brandblue;
+            font-size: 20px;
+            @include font-bold();
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .desc {
+            color: $second;
+        }
+    }
+}

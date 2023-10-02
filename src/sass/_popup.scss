@@ -1,0 +1,136 @@
+.popup {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $popupbg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    // padding: 100px 0px;
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+    &-hidden {
+        opacity: 0;
+    }
+    &-close {
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        width: 50px;
+        height: 50px;
+        background: #000;
+    }
+
+
+    &-comments {
+        .stars {
+            // position: absolute;
+            // left: 50%;
+            // top: 50%;
+            // transform: translate(-50%,-50%);
+            max-width: max-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .3s linear;
+            margin: 0px auto;
+            &-change {
+                font-size: 14px;
+                border: none;
+                background: transparent;
+                padding: 0px 30px;
+                transition: opacity .3s linear;
+                &__hidden {
+                    opacity: 0;
+                }
+            }
+            .star {
+                width: 60px;
+                height: 60px;
+                cursor: pointer;
+                background: url(../icons/star.svg) no-repeat center;
+                background-size: 50px 50px;
+                filter: grayscale(1);
+                transition: all .3s linear;
+                &-active {
+                    filter: grayscale(0);
+                }
+            }
+            &-small {
+                margin: 0px 0px 30px;
+                // left: 0%;
+                // top: 0%;
+                // transform: translate(0%,0%);
+                .star {
+                    width: 30px;
+                    height: 30px;
+                    background-size: 25px 25px;
+                }
+            }
+        }
+        .popup {
+            &-body {
+                padding: 50px;
+                background: #fff;
+                width: 600px;
+                // height: 500px;
+                position: relative;
+            }
+            &-title {
+                text-align: center;
+                font-size: 24px;
+                font-weight: 700;
+                margin-bottom: 30px;
+                h3 {
+                    font-size: 32px;
+                    font-weight: 700;
+                    margin-bottom: 16px;
+                }
+                p {
+                    font-size: 16px;
+                }
+            }
+            &-question {
+                height: 100%;
+                width: 100%;
+                position: relative;
+                textarea {
+                    resize: none;
+                    width: 100%;
+                    height: 200px;
+                }
+                .comment-wrapper {
+                    transition: opacity .3s linear;
+                    &__hidden {
+                        opacity: 0;
+                    }
+                }
+            }
+            &-btn {
+                display: block;
+                margin: 30px auto 0;
+                &__hidden {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    &-form {
+        .popup {
+            &-body {
+                width: 500px;
+                height: 500px;
+                background: #fff;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+        }
+    }
+}

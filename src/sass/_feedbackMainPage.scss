@@ -1,0 +1,31 @@
+.feedback {
+    padding: 100px 0px;
+    .titles {
+        .title,
+        .subtitle {
+            text-align: center;
+        }
+    }
+
+
+    &-item {
+        padding: 0px 100px;
+    }
+
+    &-comment {
+        p { 
+            font-size: 18px;
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &-author {
+        font-size: 20px;
+        padding: 20px 0px 0px;
+        @include font-bold();
+        color: $second;
+    }
+}

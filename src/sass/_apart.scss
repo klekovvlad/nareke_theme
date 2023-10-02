@@ -1,0 +1,14 @@
+.apart {
+    padding: 100px 0px;
+    background: $lightbg;
+    .titles {
+        .subtitle {
+            color: rgba($color: $brandblue, $alpha: 0.7);
+        }
+    }
+    &-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}

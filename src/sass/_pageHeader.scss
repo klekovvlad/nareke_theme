@@ -1,0 +1,41 @@
+.pageHeader {
+    padding: 220px 0px 100px;
+    background-size: cover;
+    background-position: left center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($color: #000000, $alpha: 0.5);
+    }
+    .page-date {
+        margin-top: 10px;
+        font-size: 18px;
+        color: $lightgray;
+        position: relative;
+        z-index: 3;
+        padding-left: 30px;
+        line-height: 1;
+        &::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background: url(../icons/calendar.svg) no-repeat center;
+            background-size: cover;
+            filter: brightness(0) saturate(100%) invert(88%) sepia(0%) saturate(0%) hue-rotate(210deg) brightness(76%) contrast(106%);
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+    }
+    h1.page-title {
+        max-width: 60%;
+    }
+}
